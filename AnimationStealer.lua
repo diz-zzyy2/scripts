@@ -47,7 +47,7 @@ function run()
 		else print("Not valid Animation!") return
 		end
 			
-        if(a and and.AnimationId and string.find(a.Name, "rbxassetid") not f:FindFirstChild(a.Name .. tostring(a.AnimationId))) then
+        if(string.find(a.AnimationId, "rbxassetid") == false and not f:FindFirstChild(a.Name .. tostring(a.AnimationId))) then
             print("Animation found: " .. a.Name .. " ~ " .. a.AnimationId)
 			local s = game:GetObjects(a.AnimationId)[1]
 			if s then
